@@ -1,1 +1,1 @@
-web: poetry run gunicorn hackathon.wsgi
+web: gunicorn hackathon.wsgi
