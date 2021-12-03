@@ -46,10 +46,7 @@ pathspec = ">=0.9.0,<1"
 platformdirs = ">=2"
 regex = ">=2021.4.4"
 tomli = ">=0.2.6,<2.0.0"
-typing-extensions = [
-    {version = ">=3.10.0.0", markers = "python_version < \"3.10\""},
-    {version = "!=3.10.0.1", markers = "python_version >= \"3.10\""},
-]
+typing-extensions = ">=3.10.0.0"
 
 [package.extras]
 colorama = ["colorama (>=0.4.3)"]
@@ -338,8 +335,8 @@ brotli = ["brotli"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.9"
-content-hash = "724fbb82857fd1d6a5438a5d41deb4044eb6d6f26611b4c39224c40f026fa3b0"
+python-versions = "3.9.7"
+content-hash = "43cd2ce08d49650b83a46fa377a5742f836db576b37f066078414496a5203682"
 
 [metadata.files]
 asgiref = [
