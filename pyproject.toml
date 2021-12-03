@@ -5,7 +5,7 @@ description = ""
 authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "3.9.7"
 Django = "^3.2.9"
 djangorestframework-files = "^1.1.0"
 djangorestframework = "^3.12.4"
