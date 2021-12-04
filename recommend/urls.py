@@ -1,9 +1,9 @@
 from django.urls import path
 
-from .views import TopicViewSet, AdeptTopicProfileViewSet, InterestTopicProfileViewSet
+from .views import TopicViewSet, AdeptTopicProfileViewSet, InterestTopicProfileViewSet, PositionViewSet
 
 urlpatterns = [
-    path("positions", TopicViewSet.as_view({"get": "list"})),
+    path("positions", PositionViewSet.as_view({"get": "list"})),
     path("topics", TopicViewSet.as_view({"get": "list", "post":"create"})),
     path("interest-profiles", InterestTopicProfileViewSet.as_view({"get": "list", "post":"create"})),
     path("interest-profiles/<int:pk>", InterestTopicProfileViewSet.as_view({"get": "retrieve"})),
