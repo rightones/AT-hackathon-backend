@@ -12,7 +12,7 @@ class TeamPositionSerializer(serializers.ModelSerializer):
 
 
 class TeamSerializer(serializers.ModelSerializer):
-    positions = TeamPositionSerializer(many=True)
+    positions = TeamPositionSerializer(many=True, read_only=True)
     class Meta:
         model = Team
         fields = "__all__"
