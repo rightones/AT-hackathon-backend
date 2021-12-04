@@ -23,7 +23,7 @@ class Team(models.Model):
     status = models.IntegerField(default=0, choices=Status.choices)
     category = models.IntegerField()
     subject = models.TextField()
-    image = models.ImageField(storage=storage, upload_to="profile/image/")
+    image = models.ImageField(storage=storage, upload_to="profile/image/", null=True)
 
 
 
