@@ -25,8 +25,8 @@ class Profile(models.Model):
     email = models.EmailField()
     address = models.TextField(null=True, blank=True)
 
-    image = models.ImageField(storage=storage, upload_to="profile/image/")
-    document = models.FileField(storage=storage, upload_to="profile/document/")
+    image = models.ImageField(storage=storage, upload_to="profile/image/", null=True, blank=True)
+    document = models.FileField(storage=storage, upload_to="profile/document/", null=True, blank=True)
 
     description = models.TextField()
     group_category1_favorite = models.BooleanField(default=False)
