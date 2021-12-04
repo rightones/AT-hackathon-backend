@@ -24,5 +24,6 @@ urlpatterns = [
     path("auth/registration/", include("dj_rest_auth.registration.urls")),
     path("profiles", include("user.urls")),
     path("teams", include("team.urls")),
+    path("messages", include("message.urls")),
 
 ]
