@@ -1,6 +1,10 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django_s3_storage.storage import S3Storage
 from recommend.models import Position
+
+
+storage = S3Storage(aws_s3_bucket_name="at-hackathon")
 
 
 class Team(models.Model):
@@ -19,6 +23,8 @@ class Team(models.Model):
     status = models.IntegerField(default=0, choices=Status.choices)
     category = models.IntegerField()
     subject = models.TextField()
+    image = models.ImageField(storage=storage, upload_to="profile/image/")
+
 
 
 class TeamPosition(models.Model):
