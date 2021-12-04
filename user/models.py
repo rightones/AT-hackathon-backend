@@ -20,10 +20,10 @@ class Profile(models.Model):
 
     gender = models.IntegerField(choices=Gender.choices)
 
-    school = models.CharField(max_length=20)
-    major = models.CharField(max_length=40)
+    school = models.CharField(max_length=20, null=True, blank=True)
+    major = models.CharField(max_length=40, null=True, blank=True)
     email = models.EmailField()
-    address = models.TextField()
+    address = models.TextField(null=True, blank=True)
 
     image = models.ImageField(storage=storage, upload_to="profile/image/")
     document = models.FileField(storage=storage, upload_to="profile/document/")
