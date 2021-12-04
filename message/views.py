@@ -14,7 +14,7 @@ class MessageViewSet(viewsets.ModelViewSet):
     serializer_class = MessageSerializer
     filterset_fields = ['user_from', "user_to"]
 
-    @action(methods=["POST"])
+    @action(methods=["POST"], detail=True)
     def accept(self, request, pk=None):
         message = self.get_object()
         instance = message.team_position
