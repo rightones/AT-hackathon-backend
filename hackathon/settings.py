@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     "team",
     "user",
     "rate",
+    "message",
     "django_filters"
 ]
 
