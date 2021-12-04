@@ -14,7 +14,7 @@ class TeamViewSet(viewsets.ModelViewSet):
     serializer_class = TeamSerializer
 
     filter_backends = [filters.SearchFilter, rest_framework.DjangoFilterBackend]
-    filterset_fields = ['related_positions__name', "category"]
+    filterset_fields = ['related_positions', "category"]
     search_fields = ['subject']
 
 
