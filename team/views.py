@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django_filters import filters
+from rest_framework import filters
 from rest_framework import viewsets
 
 from .models import Team
