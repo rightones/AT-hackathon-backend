@@ -18,12 +18,13 @@ class Team(models.Model):
 
     status = models.IntegerField(default=0, choices=Status.choices)
     category = models.IntegerField()
+    subject = models.TextField()
 
 
 class TeamPosition(models.Model):
-    required_positions = models.ManyToManyField(Position)
+    required_positions = models.ForeignKey(Position, related_name="team_positions", on_delete=models.CASCADE, null=True, blank=True)
     user = models.ForeignKey(
-        User, related_name="team_positions", on_delete=models.SET_NULL, null=True
+        User, related_name="team_positions", on_delete=models.SET_NULL, null=True, blank=True
     )
     team = models.ForeignKey(
         Team, related_name="positions", on_delete=models.SET_NULL, null=True

@@ -18,8 +18,11 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
+    path("", include("recommend.urls")),
     path("admin/", admin.site.urls),
     path("auth/", include("dj_rest_auth.urls")),
     path("auth/registration/", include("dj_rest_auth.registration.urls")),
     path("profiles", include("user.urls")),
+    path("teams", include("team.urls")),
+
 ]

@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     "team",
     "user",
     "rate",
+    "django_filters"
 ]
 
 MIDDLEWARE = [
@@ -125,8 +126,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": ("dj_rest_auth.jwt_auth.JWTCookieAuthentication",)
+    "DEFAULT_AUTHENTICATION_CLASSES": ("dj_rest_auth.jwt_auth.JWTCookieAuthentication",),
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
+
 
 REST_USE_JWT = True
 
