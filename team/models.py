@@ -14,7 +14,7 @@ class Team(models.Model):
     leader = models.ForeignKey(
         User, related_name="leader_teams", on_delete=models.CASCADE
     )
-    members = models.ManyToManyField(User, related_name="member_teams")
+    members = models.ManyToManyField(User, related_name="member_teams", blank=True, null=True)
 
     class Status(models.IntegerChoices):
         NORMAL = 0
