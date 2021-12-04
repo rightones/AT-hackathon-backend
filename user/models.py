@@ -32,3 +32,5 @@ class Profile(models.Model):
     group_category1_favorite = models.BooleanField(default=False)
     group_category2_favorite = models.BooleanField(default=False)
     group_category3_favorite = models.BooleanField(default=False)
+
+    portfolio = models.TextField(blank=True)

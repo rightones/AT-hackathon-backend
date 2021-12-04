@@ -4,8 +4,8 @@ from django.shortcuts import render
 from rest_framework import filters
 from rest_framework import viewsets
 
-from .models import Team
-from .serializers import TeamSerializer
+from .models import Team, TeamPosition
+from .serializers import TeamSerializer, TeamPositionSerializer
 
 
 class TeamViewSet(viewsets.ModelViewSet):
@@ -14,3 +14,9 @@ class TeamViewSet(viewsets.ModelViewSet):
     filterset_fields = ['related_positions__name']
     filter_backends = [filters.SearchFilter]
     search_fields = ['subject']
+
+
+class TeamPositionViewSet(viewsets.ModelViewSet):
+    queryset = TeamPosition.objects.all()
+    serializer_class = TeamPositionSerializer
+    filterset_fields = ['team__id']
