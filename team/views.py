@@ -11,9 +11,9 @@ from .serializers import TeamSerializer, TeamPositionSerializer
 class TeamViewSet(viewsets.ModelViewSet):
     queryset = Team.objects.all()
     serializer_class = TeamSerializer
-    filterset_fields = ['related_positions__name']
+    filterset_fields = ['related_positions__name', "category"]
     filter_backends = [filters.SearchFilter]
-    search_fields = ['subject', "category"]
+    search_fields = ['subject']
 
 
 class TeamPositionViewSet(viewsets.ModelViewSet):
