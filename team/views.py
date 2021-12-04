@@ -13,7 +13,7 @@ class TeamViewSet(viewsets.ModelViewSet):
     serializer_class = TeamSerializer
     filterset_fields = ['related_positions__name']
     filter_backends = [filters.SearchFilter]
-    search_fields = ['subject']
+    search_fields = ['subject', "category"]
 
 
 class TeamPositionViewSet(viewsets.ModelViewSet):
