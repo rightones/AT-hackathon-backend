@@ -8,4 +8,5 @@ class Message(models.Model):
     team_position = models.ForeignKey(TeamPosition, on_delete=models.CASCADE)
     user_from = models.ForeignKey(User, on_delete=models.CASCADE, related_name='message_sent')
     user_to = models.ForeignKey(User, on_delete=models.CASCADE, related_name='message_received')
+    content = models.TextField()
 
